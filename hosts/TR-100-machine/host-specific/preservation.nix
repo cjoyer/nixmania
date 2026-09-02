@@ -2,7 +2,7 @@
   flake.modules.nixos.TR-100-machine = {...}: {
     preservation = {
       enable = true;
-      preserveAt."/persistent" = {
+      preserveAt."/persist" = {
         directories = [
           "/var/lib/AccountsService"
           "/var/lib/bluetooth"
@@ -39,9 +39,9 @@
             ".mozilla"
             ".local/state/noctalia"
             ".local/share/bash"
-            "Desktop"
+            ".config/vesktop"
+            ".config/Vencord"
             "Documents"
-            "Downloads"
             "Music"
             "nixmania"
             "Pictures"
@@ -54,5 +54,22 @@
       };
     };
     systemd.suppressedSystemUnits = ["systemd-machine-id-commit.service"];
+
+    boot.initrd.systemd.services.wipe-root = {
+      description = "Wipe root subvolume before mounting (for preservation)";
+      wantedBy = ["initrd.target"];
+      before = ["sysroot.mount"];
+      unitConfig.DefaultDependencies = "no";
+      serviceConfig.Type = "oneshot";
+      script = ''
+        mkdir -p /btrfs_tmp
+        mount /dev/disk/by-uuid/c66fda20-9f15-44cd-b848-6d3d402bd90a /btrfs_tmp -o subvol=/
+        if [[ -e /btrfs_tmp/root ]]; then
+          btrfs subvolume delete /btrfs_tmp/root
+        fi
+        btrfs subvolume create /btrfs_tmp/root
+        umount /btrfs_tmp
+      '';
+    };
   };
 }

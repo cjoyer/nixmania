@@ -19,8 +19,8 @@
       inkwell
       // {
         emoji = {
-          name = "Noto Color Emoji";
-          package = pkgs.noto-fonts-color-emoji;
+          name = "Twitter Color Emoji";
+          # package = pkgs.twitter-color-emoji;
         };
         sizes = {
           applications = 10;

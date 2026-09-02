@@ -17,8 +17,9 @@
           urgent = {color = stx.base08;};
         };
 
+        # Todo: make a color palette checker
         border = {
-          active = {color = stx.base0D;};
+          active = {color = stx.base0E;}; # (base0D)
           inactive = {color = stx.base02;};
           urgent = {color = stx.base08;};
         };

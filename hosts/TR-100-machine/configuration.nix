@@ -62,6 +62,8 @@
         gui_packages
         gui_satty
         gui_zathura
+        gui_vesktop
+        gui_spotify
 
         # services/*
         service_bluetooth

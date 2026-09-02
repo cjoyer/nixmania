@@ -6,6 +6,7 @@
 
     hm.stylix.targets = {
       tmux.enable = false;
+      vesktop.enable = false;
       helix.enable = false;
       noctalia.enable = false;
       fontconfig.enable = true;

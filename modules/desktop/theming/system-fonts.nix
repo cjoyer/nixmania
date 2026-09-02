@@ -7,11 +7,15 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       unifont
+      twitter-color-emoji
     ];
     nerd-fonts = with pkgs.nerd-fonts; [
       symbols-only
     ];
+    emoji = with pkgs; [
+      twitter-color-emoji
+    ];
   in {
-    fonts.packages = regular ++ nerd-fonts;
+    fonts.packages = regular ++ nerd-fonts ++ emoji;
   };
 }

@@ -65,6 +65,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # spicetify
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     # firefox addons
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";

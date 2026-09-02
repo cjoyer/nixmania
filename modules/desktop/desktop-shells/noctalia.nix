@@ -182,7 +182,7 @@
 
         shell = {
           app_icon_color = "tertiary";
-          avatar_path = "${confDir}/assets/pictures/profile-pictures/pfp.jpg";
+          avatar_path = "${confDir}/assets/pictures/profile-pictures/pfp3.jpg";
           clipboard_image_action_command = "satty -f -";
           corner_radius_scale = 0.4;
           launch_apps_as_systemd_services = true;

@@ -1,6 +1,6 @@
 {...}: {
   fileSystems."/nix".neededForBoot = true;
-  fileSystems."/persistent".neededForBoot = true;
+  fileSystems."/persist".neededForBoot = true;
 
   disko.devices.nodev."/" = {
     fsType = "tmpfs";
@@ -33,9 +33,9 @@
               type = "btrfs";
               extraArgs = ["-L" "nixos" "-f"];
               subvolumes = {
-                "/persistent" = {
-                  mountpoint = "/persistent";
-                  mountOptions = ["subvol=persistent" "compress=zstd" "noatime"];
+                "/persist" = {
+                  mountpoint = "/persist";
+                  mountOptions = ["subvol=persist" "compress=zstd" "noatime"];
                 };
                 "/nix" = {
                   mountpoint = "/nix";
