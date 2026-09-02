@@ -56,12 +56,12 @@
         # programs/gui/*
         gui_alacritty
         gui_ghostty
-        gui_firefox
         gui_mpv
         gui_nautilus
         gui_packages
         gui_satty
         gui_zathura
+        gui_zen-browser
         gui_vesktop
         gui_spotify
 

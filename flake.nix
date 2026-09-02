@@ -68,10 +68,7 @@
     # spicetify
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
-    # firefox addons
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # zen browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 }

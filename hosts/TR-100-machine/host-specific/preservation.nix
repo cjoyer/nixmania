@@ -35,12 +35,12 @@
               directory = ".local/share/keyrings";
               mode = "0700";
             }
-            ".config/mozilla"
-            ".mozilla"
+            ".config/zen"
             ".local/state/noctalia"
             ".local/share/bash"
             ".config/vesktop"
             ".config/Vencord"
+            ".config/spotify"
             "Documents"
             "Music"
             "nixmania"
@@ -59,6 +59,8 @@
       description = "Wipe root subvolume before mounting (for preservation)";
       wantedBy = ["initrd.target"];
       before = ["sysroot.mount"];
+      after = ["dev-disk-by\\x2duuid-c66fda20\\x2d9f15\\x2d44cd\\x2db848\\x2d6d3d402bd90a.device"];
+      requires = ["dev-disk-by\\x2duuid-c66fda20\\x2d9f15\\x2d44cd\\x2db848\\x2d6d3d402bd90a.device"];
       unitConfig.DefaultDependencies = "no";
       serviceConfig.Type = "oneshot";
       script = ''

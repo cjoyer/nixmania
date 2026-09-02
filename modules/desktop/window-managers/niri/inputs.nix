@@ -4,7 +4,10 @@
       keyboard = {
         repeat-delay = 300;
         repeat-rate = 35;
-        xkb.layout = "us";
+        xkb = {
+          layout = "us,ru,ua";
+          options = "grp:alt_space_toggle";
+        };
       };
 
       touchpad = {
