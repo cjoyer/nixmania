@@ -12,6 +12,13 @@
 
       # GUI
       onlyoffice-desktopeditors
+
+      # DevOps tools
+      docker
+      kubernetes
+      minikube
+      virt-manager
+      libvirt
     ];
   };
 }

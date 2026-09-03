@@ -13,7 +13,7 @@
 
         audio = {
           enable_sounds = true;
-          sound_volume = 1.0;
+          sound_volume = 0.24;
         };
 
         backdrop.enabled = true;
