@@ -1,6 +1,6 @@
 > [!warning]
 >
-> 1. For advanced users only!
+> For advanced users only!
 
 ---
 
